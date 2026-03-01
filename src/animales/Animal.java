@@ -15,6 +15,14 @@ public abstract class Animal {
     private LocalDate fechaNacimiento;
     private char sexo;
     private double peso;
+    
+    /**
+     * 
+     * @param codigo
+     * @param fechaNacimiento
+     * @param sexo
+     * @param peso 
+     */
 
     public Animal(String codigo, String fechaNacimiento, char sexo, double peso) {
 
