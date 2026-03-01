@@ -43,11 +43,17 @@ public abstract class Animal {
             this.peso = peso;
         }
     }
-
+/**
+ * 
+ * @return 
+ */
     public String getCodigo() {
         return codigo;
     }
-
+/**
+ * 
+ * @param codigo 
+ */
     public void setCodigo(String codigo) {
         if (!codigo.matches("[0-9a-z]{5}")) {
             throw new IllegalArgumentException();
@@ -55,11 +61,17 @@ public abstract class Animal {
             this.codigo = codigo;
         }
     }
-
+/**
+ * 
+ * @return 
+ */
     public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
-
+/**
+ * 
+ * @param fechaNacimiento 
+ */
     public void setFechaNacimiento(String fechaNacimiento) {
         LocalDate fecha;
 
@@ -71,11 +83,17 @@ public abstract class Animal {
 
         this.fechaNacimiento = fecha;
     }
-
+/**
+ * 
+ * @return 
+ */
     public char getSexo() {
         return sexo;
     }
-
+/**
+ * 
+ * @param sexo 
+ */
     public void setSexo(char sexo) {
         if ((sexo != 'M' && sexo != 'H')) {
             throw new IllegalArgumentException();
@@ -83,11 +101,17 @@ public abstract class Animal {
             this.sexo = sexo;
         }
     }
-
+/**
+ * 
+ * @return 
+ */
     public double getPeso() {
         return peso;
     }
-
+/**
+ * 
+ * @param peso 
+ */
     public void setPeso(double peso) {
         if (peso <= 0) {
             throw new IllegalArgumentException();
@@ -95,7 +119,10 @@ public abstract class Animal {
             this.peso = peso;
         }
     }
-
+/**
+ * 
+ * @return 
+ */
     @Override
     public int hashCode() {
         int hash = 3;
@@ -105,7 +132,11 @@ public abstract class Animal {
         hash = 19 * hash + (int) (Double.doubleToLongBits(this.peso) ^ (Double.doubleToLongBits(this.peso) >>> 32));
         return hash;
     }
-
+/**
+ * 
+ * @param obj
+ * @return 
+ */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -132,17 +163,34 @@ public abstract class Animal {
         }
         return true;
     }
-
+/**
+ * 
+ * @return 
+ */
     @Override
     public String toString() {
         return "Animal{" + "codigo=" + codigo + ", fechaNacimiento=" + fechaNacimiento + ", sexo=" + sexo + ", peso=" + peso + '}';
     }
-
+/**
+ * 
+ * @return 
+ */
     public abstract String hacerSonido();
+    /**
+     * 
+     * @return 
+     */
 
     public abstract String alegrarse();
+    /**
+     * 
+     * @return 
+     */
 
     public abstract String enfadarse();
+    /**
+     * 
+     * @return      */
 
     public abstract String queSoy();
 
